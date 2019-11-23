@@ -1,12 +1,4 @@
 @charset "utf-8";
-/*
-*{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}*/
 
 html {
     height: 100%;
@@ -14,17 +6,16 @@ html {
     background-size: cover;
     background: radial-gradient(circle, #fff 20%, #ccc);
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5vw;
     font-weight: bold;
 }
 
 .main_calc{
-    width: 30vw;
+    width: 30rem;
     height: auto;
     background-color: #fff);
     background: linear-gradient(#fff, #eee);
-    ruby-align: center;
     padding: 1.5vw 3vw;
     box-shadow: 0px 10px 18px #333;
 }
@@ -43,16 +34,20 @@ html {
     font-size: 1.8vw;
 }
 
-.tombol ul li{
+.tombol tr td{
     background-color: #e5e5e5;
     display: inline;
     border-radius: 25vw 25vw 45vw 45vw;
     padding-top: 0.3vh;
-    padding-bottom: 0.3vh;
+    padding-bottom: 0.5vh;
     padding-left: 1vw;
     padding-right: 1vw;
-    min-width: 2.5vw;
-    min-height: 2vh;
+    margin: 1%;
+}
+
+.tombol tr td:hover{
+    color: #eee;
+    background-color: #17b52f;
 }
 
 .tombol .operator{
