@@ -1,21 +1,3 @@
-/* Tugas ARC Day 2 - Kalkulator
- * Avima Haamesha (FMIPA)
- * Member (Faculty)
- */
+/* Tugas ARC Day 2 - Kalkulator */
 
- function sistem_calc() {
-
-    // inisiasi variabel
-    var operan = docment.querySelectorAll("#main_calc li");
-    var operator = ["x", "÷", "+", "-"];
-    var layarInput = document.querySelector("#layar");
-    var hasil;
-    var input;
-
-    for(var i=0; i < operan.length; i++) {
-
-        var desimal = false;
-
-        operan[i]
-    }
- }
+/* JS included on calculator.html*/

@@ -6,52 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
-<body onload="sistem_calc()">
-    <div class="main_calc">
-        <!--Ini buat kasih merek, biar keren dikit-->
-        <div class="top_calc">
-        
-        </div>
+<script>
+    function clickme(x){
+        myform.display.value += x;
+    }
 
-        <!--Layar untuk menampilkan angka-->
-        <div class="layar">
+    function backspc(){
+        var prevalue = myform.display.value;
+        myform.display.value = prevalue.substr(0, prevalue.length-1);
+    }
+
+    function fungsiAC(){
+        myform.display.value = 0;
+    }
+
+    function evaluate(){
+        myform.display.value = eval(myform.display.value);
+    }
+</script>
+
+<body class="container">
+    <!--<div class="main_calc">-->
+        <form class="main_calc" name="myform">
             
-        </div>
+            <!--Ini buat kasih merek, biar keren dikit-->
+            <div class="merk_calc">
+            
+            </div>
 
-        <!--Tombol angka dan operator-->
-        <div class="tombol">
-            <table border="1px">
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td class="key_del" c>Del</td>
-                <td class="key_ac">AC</td>
-            </tr><tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td class="operator">x</td>
-                <td class="operator">÷</td>
-            </tr><tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td class="operator">+</td>
-                <td class="operator">-</td>
-            </tr><tr>
-                <td>0</td>
-                <td>,</td>
-                <td>x10<sup>x</sup></td>
-                <td class="operator">Ans</td>
-                <td class="operator">=</td>
-            </tr>
-            </table>
-        </div> <!--close tag tombol-->
+            <!--Layar untuk menampilkan angka-->
+            <div class="layar">
+                <input type="text" name="display" readonly><br>
+            </div>
 
-    </div>
+            <!--Tombol angka dan operator-->
+            <div class="tombol">
+                <div class="tombolBlack">
+                    <input type="button" name="btnSin" value="sin" onclick="clickme('sin')">
+                    <input type="button" name="btnCos" value="cos" onclick="clickme('cos')">
+                    <input type="button" name="btnTan" value="tan" onclick="clickme('tan')">
+                    <input type="button" name="btnCot" value="cot" onclick="clickme('cot')">
+                    <input type="button" name="btnOn" value="ON" onclick="fungsiON()">
+                    <br>
+                </div>
 
-    <script type="text/javascript" scr="js_calculator.js"></script>
+                <div class="tombolSilver">
+                    <input type="button" name="btn7" value="7" onclick="clickme('7')">
+                    <input type="button" name="btn8" value="8" onclick="clickme('8')">
+                    <input type="button" name="btn9" value="9" onclick="clickme('9')">
+                    <input class="btnDel" type="button" name="btnDel" value="DEL" onclick="backspc()">
+                    <input class="btnAC" type="button" name="btnAC" value="AC" onclick="fungsiAC()">
+                    <br>
+                    <input type="button" name="btn4" value="4" onclick="clickme('4')">
+                    <input type="button" name="btn5" value="5" onclick="clickme('5')">
+                    <input type="button" name="btn6" value="6" onclick="clickme('6')">
+                    <input type="button" name="btnMul" value="x" onclick="clickme('*')">
+                    <input type="button" name="btnDiv" value="/" onclick="clickme('/')">
+                    <br>
+                    <input type="button" name="btn1" value="1" onclick="clickme('1')">
+                    <input type="button" name="btn2" value="2" onclick="clickme('2')">
+                    <input type="button" name="btn3" value="3" onclick="clickme('3')">
+                    <input type="button" name="btnAdd" value="+" onclick="clickme('+')">
+                    <input type="button" name="btnMin" value="-" onclick="clickme('-')">
+                    <br>
+                    <input type="button" name="btn0" value="0" onclick="clickme('0')">
+                    <input type="button" name="btnComma" value="." onclick="clickme('.')">
+                    <input type="button" name="btn10pangkat" value="x10^x" onclick="#">
+                    <input type="button" name="btnAns" value="Ans" onclick="#">
+                    <input type="button" name="btnHasil" value="=" onclick="evaluate('myform.display.value')">
+                </div>
+            </div> <!--close tag tombol-->
+        </form>
+    <!--</div>-->
 </body>
 
 </html>

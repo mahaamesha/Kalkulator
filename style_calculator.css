@@ -1,21 +1,33 @@
 @charset "utf-8";
 
-html {
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
     height: 100%;
     background-color: #fff;
     background-size: cover;
     background: radial-gradient(circle, #fff 20%, #ccc);
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5vw;
     font-weight: bold;
 }
 
+.container{
+    width: 40%;
+    min-width: 300px;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
 .main_calc{
-    width: 30rem;
-    height: auto;
+    min-height: 40vw;
     background-color: #fff);
     background: linear-gradient(#fff, #eee);
+    border-radius: 5%;
+    position: relative;
     padding: 1.5vw 3vw;
     box-shadow: 0px 10px 18px #333;
 }
@@ -25,39 +37,60 @@ html {
 }
 
 .layar{
-    height: 10vh;
-    width: 30vw;
+    text-align: center;
+}
+
+.layar input{
+    margin-top: 10%;
+    height: 5vh;
+    width: 90%; 
     background-color: #d2d2d2;
     border-radius: 5%;
     box-shadow: 0px 5px 18px #333;
-
+    text-align: right;
     font-size: 1.8vw;
+    color: #000;
 }
 
-.tombol tr td{
+.tombol input{
+    text-align: center;
+    padding-top: 0.4vh;
+    padding-bottom: 0.6vh;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    margin: 3%;
+}
+
+.tombolBlack input{
+    background-color: #000;
+    color: #fff;
+    border-radius: 25vw;
+}
+
+
+.tombolSilver input{
     background-color: #e5e5e5;
-    display: inline;
     border-radius: 25vw 25vw 45vw 45vw;
-    padding-top: 0.3vh;
-    padding-bottom: 0.5vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    margin: 1%;
 }
 
-.tombol tr td:hover{
+.tombolSilver input:hover{
     color: #eee;
     background-color: #17b52f;
 }
 
-.tombol .operator{
-    background-color: #7a7afa;
+.tombolSilver .btnDel{
+    background-color: #fc624b;
+    letter-spacing: -1px;
+    padding-top: 0.5vh;
+    padding-bottom: 0.7vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }
 
-.tombol .key_del{
+.tombolSilver .btnAC{
     background-color: #fc624b;
-}
-
-.tombol .key_ac{
-    background-color: #fc624b;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }
